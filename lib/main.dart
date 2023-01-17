@@ -1,3 +1,4 @@
+import 'package:basic_flutter/ContactPage.dart';
 import 'package:flutter/material.dart';
 import './Contact.dart';
 
@@ -51,6 +52,8 @@ class _MyHomePageState extends State<MyHomePage> {
               subtitle: Text(mem.position, style: TextStyle(fontSize: 10)),
               onTap: () {
                 print("Contact:>" + mem.name);
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => ContactPage(mem)));
               },
             );
           },
